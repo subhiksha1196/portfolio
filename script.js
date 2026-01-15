@@ -38,9 +38,6 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(form);
 
-    // Inject Access Key from config.js
-    formData.append('access_key', CONFIG.WEB3FORMS_ACCESS_KEY);
-
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 

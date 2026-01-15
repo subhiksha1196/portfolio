@@ -1,0 +1,3 @@
+const CONFIG = {
+    WEB3FORMS_ACCESS_KEY: "90365e77-5a87-403a-b720-de1a6702fa52"
+};
