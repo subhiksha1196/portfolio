@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhiksha</title>
+    <meta name="description" content="Portfolio of Subhiksha.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="glass-header">
+        <nav>
+            <div class="logo">subhiksha<span class="dot">.</span>dev</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="projects.html">Work</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#about">About</a></li>
+                <li><button id="contact-btn" class="cta-small">Let's Talk</button></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="subtitle">Hello, I'm Subhiksha G</span>
+                <h1>Building digital <br> <span class="gradient-text">masterpieces</span>.</h1>
+                <p>CSE Student & Frontend Developer passionate about building practical projects ranging from
+                    interactive web applications to exploring AI-powered healthcare solutions.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#about" class="btn-secondary">More About Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block-wrapper">
+                    <pre><code class="language-javascript">
+const developer = {
+  name: "Subhiksha",
+  passion: "Innovation",
+  code: () => {
+    return "Magic";
+  }
+};
+                    </code></pre>
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <header class="section-header">
+                <h2>Featured Work</h2>
+                <p>A selection of my recent experiments and builds.</p>
+            </header>
+
+            <div class="home-projects-container">
+                <div class="home-projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <figure>
+                            <img src="project-images/snakescape.png" alt="Snakescape" class="project-image">
+                            <figcaption>
+                                <h3>Snakescape</h3>
+                                <p>Modern remake of the classic Snake game with multiple modes and smooth UI.</p>
+                                <div class="tags">
+                                    <span>C</span>
+                                    <span>Raylib</span>
+                                </div>
+                                <a href="https://github.com/subhiksha1196/snakescape" target="_blank"
+                                    class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <figure>
+                            <img src="project-images/smart-parking-system.png" alt="Smart Parking System"
+                                class="project-image">
+                            <figcaption>
+                                <h3>Smart Parking System</h3>
+                                <p>Full-stack platform with real-time allocation and reservations.</p>
+                                <div class="tags">
+                                    <span>Java</span>
+                                    <span>Spring Boot</span>
+                                    <span>JS</span>
+                                </div>
+                                <a href="https://github.com/subhiksha1196/smart-parking-system" target="_blank"
+                                    class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <figure>
+                            <img src="project-images/weather-tracker.png" alt="Weather Tracker" class="project-image">
+                            <figcaption>
+                                <h3>Weather Tracker</h3>
+                                <p>Real-time weather tracking with smart autocomplete and debounced search.</p>
+                                <div class="tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>REST APIs</span>
+                                </div>
+                                <a href="https://subhiksha1196.github.io/weather-tracker/" class="project-link">View
+                                    Project <i class="fa-solid fa-arrow-right"></i></a>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="projects.html" class="btn-secondary">Explore All Projects <i class="fa-solid fa-grip"></i></a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skew-section">
+            <div class="content-wrapper">
+                <header class="section-header">
+                    <h2>Technical Arsenal</h2>
+                </header>
+
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>Java</li>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-layer-group"></i> Frameworks</h3>
+                        <ul>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                        <h3 style="margin-top: 1.5rem;"><i class="fa-solid fa-terminal"></i> Platforms</h3>
+                        <ul>
+                            <li>Kaggle</li>
+                            <li>Google Colab</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>LaTeX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section using Details/Summary -->
+        <section id="about">
+            <div class="about-layout">
+                <aside class="about-sidebar">
+                    <img src="https://ui-avatars.com/api/?name=Subhiksha+G&background=38bdf8&color=fff&size=200"
+                        alt="Subhiksha G" class="profile-img">
+                    <div class="social-links">
+                        <a href="https://github.com/subhiksha1196" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://leetcode.com/u/subhiksha1196/" target="_blank"><i
+                                class="fa-solid fa-code"></i></a>
+                    </div>
+                </aside>
+                <article class="about-content">
+                    <h2>Behind the Code</h2>
+                    <p>I'm a third-year Computer Science student with a passion for building things that live on the
+                        internet. My interest in web development started back in 2020 when I decided to try editing
+                        custom Tumblr themes — turns out hacking together HTML & CSS is pretty fun!</p>
+
+                    <div class="faq-section">
+                        <h3>Quick Facts</h3>
+                        <details open>
+                            <summary><span><i class="fa-solid fa-graduation-cap"></i> Education</span></summary>
+                            <div class="edu-item">
+                                <strong>SSN College of Engineering</strong>
+                                <p>B.E. Computer Science & Engineering (2024 – 2028)</p>
+                                <p>CGPA: 8.718/10</p>
+                            </div>
+                            <div class="edu-item" style="margin-top: 0.25rem;">
+                                <strong>Vivekananda Matric Higher Secondary School</strong>
+                                <p>12th Grade: 96.3% (2024)</p>
+                                <p>10th Grade: 98.6% (2022)</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary><span><i class="fa-solid fa-certificate"></i> Certifications</span></summary>
+                            <p>Data Science for Engineers – NPTEL Certificate</p>
+                        </details>
+                        <details>
+                            <summary><span><i class="fa-solid fa-location-dot"></i> Location</span></summary>
+                            <p>Chennai, Tamil Nadu</p>
+                        </details>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">subhiksha<span class="dot">.</span>dev</div>
+                <p>Building digital masterpieces through code and creativity.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/subhiksha1196" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/u/subhiksha1196/" target="_blank"><i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="projects.html">Work</a></li>
+                    <li><a href="#skills">Stack</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Connect</h4>
+                <p>subhiksha1196@gmail.com</p>
+                <p>Chennai, Tamil Nadu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Subhiksha G. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Dialog Modal -->
+    <dialog id="contact-dialog">
+        <form method="POST" id="contact-form" class="contact-form">
+            <header>
+                <h2>Get in Touch</h2>
+                <button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </header>
+
+            <!-- Access Key will be injected via config.js -->
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Write message here..."></textarea>
+            </div>
+
+            <div id="form-result" class="form-status" style="display: none;"></div>
+
+            <footer>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </footer>
+        </form>
+    </dialog>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
