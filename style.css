@@ -919,4 +919,18 @@ dialog header {
     * {
         max-width: 100%;
     }
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: rgba(2, 6, 23, 0.97);
+        backdrop-filter: blur(12px);
+        padding: 2rem 5%;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--glass-border);
+        z-index: 999;
+    }
 }

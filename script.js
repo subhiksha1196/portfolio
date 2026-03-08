@@ -1,3 +1,18 @@
+// Hamburger Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
+
+// Close menu when a nav link is clicked
+navLinks.querySelectorAll('a, button').forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+    });
+});
+
 // Efficient Script for Dialog & Form Handling
 const dialog = document.getElementById('contact-dialog');
 const contactBtn = document.getElementById('contact-btn');
