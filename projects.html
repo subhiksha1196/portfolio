@@ -7,11 +7,10 @@
     <title>Work | Subhiksha G</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="s.png">
 </head>
 
 <body class="subpage">
@@ -23,9 +22,13 @@
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="projects.html" class="active">Work</a></li>
                 <li><a href="index.html#skills">Stack</a></li>
+                <li><a href="index.html#research">Research</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><button id="contact-btn" class="cta-small">Let's Talk</button></li>
             </ul>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
     </header>
 
@@ -38,100 +41,149 @@
             </header>
 
             <div class="projects-grid" style="padding: 0 10% 6rem;">
-                <!-- Project 1 -->
+
+                <!-- EventHub -->
                 <article class="project-card">
                     <figure>
-                        <img src="project-images/snakescape.png" alt="Snakescape" class="project-image">
+                        <img src="project-images/eventhub.png" alt="EventHub" class="project-image">
                         <figcaption>
-                            <h3>Snakescape</h3>
-                            <p>Modern remake of the classic Snake game with multiple modes and smooth controls.</p>
+                            <h3>EventHub</h3>
+                            <p>Full-stack microservices platform for college co-curricular event management. Three Spring Boot services, dedicated MongoDB databases, JWT auth, and role-based React frontend.</p>
                             <div class="tags">
-                                <span>C</span>
-                                <span>Raylib</span>
+                                <span>React 19</span>
+                                <span>TypeScript</span>
+                                <span>Spring Boot 3</span>
+                                <span>MongoDB</span>
+                                <span>JWT</span>
                             </div>
-                            <a href="https://github.com/subhiksha1196/snakescape" class="project-link">View Project <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/subhiksha1196/EventHub" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Project 2 -->
+                <!-- Smart Parking -->
                 <article class="project-card">
                     <figure>
-                        <img src="project-images/smart-parking-system.png" alt="Smart Parking System"
-                            class="project-image">
+                        <img src="project-images/smart-parking-system.png" alt="Smart Parking System" class="project-image">
                         <figcaption>
                             <h3>Smart Parking System</h3>
-                            <p>Full-stack platform with real-time allocation, reservations, and multi-payment support.
-                            </p>
+                            <p>Full-stack parking management with real-time slot allocation, reservations, priority access for differently-abled users, and multi-payment gateway support.</p>
                             <div class="tags">
                                 <span>Java</span>
                                 <span>Spring Boot</span>
-                                <span>JS</span>
+                                <span>HTML/CSS/JS</span>
+                                <span>Maven</span>
                             </div>
-                            <a href="https://github.com/subhiksha1196/smart-parking-system" target="_blank"
-                                class="project-link">View Project <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/subhiksha1196/smart-parking-system" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Project 3 -->
+                <!-- FraudShield -->
+                <article class="project-card">
+                    <figure>
+                        <img src="project-images/fraudshield.png" alt="FraudShield" class="project-image">
+                        <figcaption>
+                            <h3>FraudShield <span class="contributor-badge">UI Contributor</span></h3>
+                            <p>Production-grade AI fraud detection platform protecting Indian users from SMS, WhatsApp, and email scams. Contributed Dashboard, Result, and Transparency frontend pages.</p>
+                            <div class="tags">
+                                <span>Next.js 14</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                                <span>Supabase</span>
+                            </div>
+                            <a href="https://github.com/Sanjai05122006/fraudshield" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <!-- Weather Tracker -->
                 <article class="project-card">
                     <figure>
                         <img src="project-images/weather-tracker.png" alt="Weather Tracker" class="project-image">
                         <figcaption>
                             <h3>Weather Tracker</h3>
-                            <p>Real-time weather tracking with smart autocomplete and robust error handling.</p>
+                            <p>Real-time weather dashboard with smart city autocomplete, debounced API calls, 5-day forecast, and graceful error handling.</p>
                             <div class="tags">
                                 <span>HTML</span>
                                 <span>CSS</span>
+                                <span>JavaScript</span>
                                 <span>REST APIs</span>
                             </div>
-                            <a href="https://subhiksha1196.github.io/weather-tracker/" class="project-link">View Project
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://subhiksha1196.github.io/weather-tracker/" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Project 4 -->
+                <!-- Currency Converter -->
                 <article class="project-card">
                     <figure>
                         <img src="project-images/currency-converter.png" alt="Currency Converter" class="project-image">
                         <figcaption>
                             <h3>Currency Converter</h3>
-                            <p>Real-time converter supporting 150+ global currencies with live exchange rates.</p>
+                            <p>Live currency conversion across 150+ currencies with real-time exchange rates, flag icons, and one-click swap functionality.</p>
                             <div class="tags">
                                 <span>HTML</span>
                                 <span>CSS</span>
+                                <span>JavaScript</span>
                                 <span>REST APIs</span>
                             </div>
-                            <a href="https://subhiksha1196.github.io/currency-converter/" class="project-link">View
-                                Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://subhiksha1196.github.io/currency-converter/" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Project 5 -->
+                <!-- Snakescape -->
                 <article class="project-card">
                     <figure>
-                        <img src="project-images/rock-paper-scissors.png" alt="Rock Paper Scissors"
-                            class="project-image">
+                        <img src="project-images/snakescape.png" alt="Snakescape" class="project-image">
                         <figcaption>
-                            <h3>Rock Paper Scissors</h3>
-                            <p>Responsive browser-based game with real-time score tracking and animations.</p>
+                            <h3>Snakescape</h3>
+                            <p>Modern Snake game remake with multiple game modes, smooth UI animations, high-score tracking, and responsive keyboard controls.</p>
+                            <div class="tags">
+                                <span>C</span>
+                                <span>Raylib</span>
+                            </div>
+                            <a href="https://github.com/subhiksha1196/snakescape" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <!-- Habit Tracker -->
+                <article class="project-card">
+                    <figure>
+                        <img src="project-images/habit-tracker.png" alt="Habit Tracker" class="project-image">
+                        <figcaption>
+                            <h3>Habit Tracker</h3>
+                            <p>Minimal habit tracking app to build and maintain daily routines with streak tracking and progress visualization.</p>
                             <div class="tags">
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="https://subhiksha1196.github.io/rock-paper-scissors/" class="project-link">View
-                                Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/subhiksha1196/habit-tracker" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </figcaption>
                     </figure>
                 </article>
 
-                <!-- Project 6 -->
+                <!-- Rock Paper Scissors -->
+                <article class="project-card">
+                    <figure>
+                        <img src="project-images/rock-paper-scissors.png" alt="Rock Paper Scissors" class="project-image">
+                        <figcaption>
+                            <h3>Rock Paper Scissors</h3>
+                            <p>Responsive browser-based game with real-time score tracking and smooth animations.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://subhiksha1196.github.io/rock-paper-scissors/" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <!-- Tic Tac Toe -->
                 <article class="project-card">
                     <figure>
                         <img src="project-images/tic-tac-toe.png" alt="Tic-Tac-Toe" class="project-image">
@@ -143,11 +195,11 @@
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="https://subhiksha1196.github.io/tic-tac-toe/" class="project-link">View Project <i
-                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://subhiksha1196.github.io/tic-tac-toe/" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </figcaption>
                     </figure>
                 </article>
+
             </div>
         </section>
     </main>
@@ -159,8 +211,7 @@
                 <p>Building digital masterpieces through code and creativity.</p>
                 <div class="footer-socials">
                     <a href="https://github.com/subhiksha1196" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://leetcode.com/u/subhiksha1196/" target="_blank"><i class="fa-solid fa-code"></i></a>
                 </div>
             </div>
@@ -170,6 +221,7 @@
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="projects.html">Work</a></li>
                     <li><a href="index.html#skills">Stack</a></li>
+                    <li><a href="index.html#research">Research</a></li>
                     <li><a href="index.html#about">About</a></li>
                 </ul>
             </div>
@@ -186,11 +238,12 @@
 
     <!-- Contact Dialog Modal -->
     <dialog id="contact-dialog">
-        <form method="dialog" class="contact-form">
+        <form method="POST" id="contact-form" class="contact-form">
             <header>
                 <h2>Get in Touch</h2>
-                <button value="cancel" formmethod="dialog" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
             </header>
+            <input type="hidden" name="access_key" value="90365e77-5a87-403a-b720-de1a6702fa52">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -201,36 +254,15 @@
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required
-                    placeholder="Tell me about your project..."></textarea>
+                <textarea id="message" name="message" rows="4" required placeholder="Write message here..."></textarea>
             </div>
+            <div id="form-result" class="form-status" style="display: none;"></div>
             <footer>
-                <button value="default" type="submit" class="btn-primary">Send Message</button>
+                <button type="submit" class="btn-primary">Send Message</button>
             </footer>
         </form>
     </dialog>
 
-    <script>
-        const dialog = document.getElementById('contact-dialog');
-        const contactBtn = document.getElementById('contact-btn');
-        const closeBtn = document.querySelector('.close-btn');
-
-        contactBtn.addEventListener('click', () => {
-            dialog.showModal();
-        });
-
-        dialog.addEventListener('click', (e) => {
-            const dialogDimensions = dialog.getBoundingClientRect();
-            if (
-                e.clientX < dialogDimensions.left ||
-                e.clientX > dialogDimensions.right ||
-                e.clientY < dialogDimensions.top ||
-                e.clientY > dialogDimensions.bottom
-            ) {
-                dialog.close();
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>

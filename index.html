@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subhiksha</title>
-    <meta name="description" content="Portfolio of Subhiksha.">
+    <meta name="description" content="Portfolio of Subhiksha G — Full-Stack Developer & AI/ML Researcher.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="s.png">
-
 </head>
 
 <body>
@@ -26,6 +23,7 @@
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="projects.html">Work</a></li>
                 <li><a href="#skills">Stack</a></li>
+                <li><a href="#research">Research</a></li>
                 <li><a href="#about">About</a></li>
                 <li><button id="contact-btn" class="cta-small">Let's Talk</button></li>
             </ul>
@@ -41,16 +39,15 @@
             <div class="hero-content">
                 <span class="subtitle">Hello, I'm Subhiksha G</span>
                 <h1>Building digital <br> <span class="gradient-text">masterpieces</span>.</h1>
-                <p>CSE Student & Frontend Developer passionate about building practical projects ranging from
-                    interactive web applications to exploring AI-powered healthcare solutions.</p>
+                <p>CSE Student & Full-Stack Developer passionate about building end-to-end web applications, microservices architectures, and exploring AI-powered solutions.</p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="projects.html" class="btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="#about" class="btn-secondary">More About Me</a>
                     <div class="resume-container">
                         <a href="Subhiksha's Resume.pdf" download class="btn-resume">
                             <i class="fa-solid fa-file-pdf"></i> Resume
                         </a>
-                        <span class="resume-date">Updated: Jan 24, 2026</span>
+                        <span class="resume-date">Updated: Apr 2026</span>
                     </div>
                 </div>
             </div>
@@ -59,10 +56,10 @@
                     <pre><code class="language-javascript">
 const developer = {
   name: "Subhiksha",
-  passion: "Innovation",
-  code: () => {
-    return "Magic";
-  }
+  stack: ["React", "Spring Boot",
+          "MongoDB", "FastAPI"],
+  passion: "Full-Stack + AI/ML",
+  build: () => "Ship it."
 };
                     </code></pre>
                     <div class="blob blob-1"></div>
@@ -71,11 +68,11 @@ const developer = {
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Featured Projects Section -->
         <section id="projects" class="fade-in">
             <header class="section-header">
                 <h2>Featured Work</h2>
-                <p>A selection of my recent experiments and builds.</p>
+                <p>A selection of my recent builds and experiments.</p>
             </header>
 
             <div class="home-projects-container">
@@ -83,16 +80,17 @@ const developer = {
                     <!-- Project 1 -->
                     <article class="project-card">
                         <figure>
-                            <img src="project-images/snakescape.png" alt="Snakescape" class="project-image">
+                            <img src="project-images/eventhub.png" alt="EventHub" class="project-image">
                             <figcaption>
-                                <h3>Snakescape</h3>
-                                <p>Modern remake of the classic Snake game with multiple modes and smooth UI.</p>
+                                <h3>EventHub</h3>
+                                <p>Full-stack microservices platform for college event management with JWT auth and role-based access.</p>
                                 <div class="tags">
-                                    <span>C</span>
-                                    <span>Raylib</span>
+                                    <span>React 19</span>
+                                    <span>Spring Boot 3</span>
+                                    <span>MongoDB</span>
+                                    <span>JWT</span>
                                 </div>
-                                <a href="https://github.com/subhiksha1196/snakescape" target="_blank"
-                                    class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="https://github.com/subhiksha1196/EventHub" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                             </figcaption>
                         </figure>
                     </article>
@@ -100,18 +98,16 @@ const developer = {
                     <!-- Project 2 -->
                     <article class="project-card">
                         <figure>
-                            <img src="project-images/smart-parking-system.png" alt="Smart Parking System"
-                                class="project-image">
+                            <img src="project-images/smart-parking-system.png" alt="Smart Parking System" class="project-image">
                             <figcaption>
                                 <h3>Smart Parking System</h3>
-                                <p>Full-stack platform with real-time allocation and reservations.</p>
+                                <p>Full-stack platform with real-time slot allocation, reservations, and multi-payment support.</p>
                                 <div class="tags">
                                     <span>Java</span>
                                     <span>Spring Boot</span>
                                     <span>JS</span>
                                 </div>
-                                <a href="https://github.com/subhiksha1196/smart-parking-system" target="_blank"
-                                    class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="https://github.com/subhiksha1196/smart-parking-system" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                             </figcaption>
                         </figure>
                     </article>
@@ -122,14 +118,13 @@ const developer = {
                             <img src="project-images/weather-tracker.png" alt="Weather Tracker" class="project-image">
                             <figcaption>
                                 <h3>Weather Tracker</h3>
-                                <p>Real-time weather tracking with smart autocomplete and debounced search.</p>
+                                <p>Real-time weather dashboard with smart autocomplete, debounced search, and 5-day forecast.</p>
                                 <div class="tags">
                                     <span>HTML</span>
                                     <span>CSS</span>
                                     <span>REST APIs</span>
                                 </div>
-                                <a href="https://subhiksha1196.github.io/weather-tracker/" class="project-link">View
-                                    Project <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="https://subhiksha1196.github.io/weather-tracker/" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
                             </figcaption>
                         </figure>
                     </article>
@@ -152,61 +147,97 @@ const developer = {
                         <h3><i class="fa-solid fa-code"></i> Languages</h3>
                         <ul>
                             <li>Python</li>
-                            <li>C</li>
                             <li>Java</li>
+                            <li>C</li>
                             <li>TypeScript</li>
-                            <li>HTML5 / CSS3</li>
                             <li>JavaScript (ES6+)</li>
+                            <li>HTML5 / CSS3</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fa-solid fa-layer-group"></i> Frameworks & Libraries</h3>
+                        <h3><i class="fa-solid fa-layer-group"></i> Frontend</h3>
                         <ul>
+                            <li>React 19</li>
+                            <li>Next.js 14</li>
+                            <li>Vite</li>
                             <li>Tailwind CSS</li>
-                            <li>Spring Boot</li>
+                            <li>React Router</li>
+                            <li>Figma</li>
                         </ul>
-                        <h3 style="margin-top: 1.5rem;"><i class="fa-solid fa-terminal"></i> Platforms</h3>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-server"></i> Backend</h3>
                         <ul>
-                            <li>Kaggle</li>
-                            <li>Google Colab</li>
+                            <li>Spring Boot 3</li>
+                            <li>Spring Security</li>
+                            <li>FastAPI</li>
+                            <li>Node.js</li>
+                            <li>REST APIs</li>
+                            <li>JWT</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3><i class="fa-solid fa-database"></i> Databases</h3>
                         <ul>
+                            <li>MongoDB</li>
                             <li>MySQL</li>
                             <li>Oracle SQL</li>
-                            <li>MongoDB</li>
-                        </ul>
-                        <h3 style="margin-top: 1.5rem;"><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
-                        <ul>
-                            <li>Git & GitHub</li>
-                            <li>VS Code</li>
-                            <li>LaTeX</li>
+                            <li>Supabase</li>
+                            <li>Cassandra</li>
+                            <li>Neo4j</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section using Details/Summary -->
+        <!-- Research Section -->
+        <section id="research">
+            <header class="section-header">
+                <h2>Research</h2>
+                <p>Academic work at the intersection of NLP, ML, and cybersecurity.</p>
+            </header>
+            <div class="research-grid">
+                <article class="research-card">
+                    <div class="research-badge">Under Review</div>
+                    <h3>Detecting Machine-Generated Code</h3>
+                    <p class="research-venue">SemEval-2026 Task 13</p>
+                    <p>Binary, multi-class, and hybrid detection of AI-generated code across multiple programming languages using fine-tuned CodeBERT on curated benchmark datasets.</p>
+                    <div class="tags">
+                        <span>NLP</span>
+                        <span>CodeBERT</span>
+                        <span>Python</span>
+                    </div>
+                    <a href="https://github.com/subhiksha1196/semeval-2026-task13" target="_blank" class="project-link">View Repo <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="research-card">
+                    <div class="research-badge ongoing">Ongoing</div>
+                    <h3>Graph Neural Networks for Cybersecurity</h3>
+                    <p class="research-venue">SSN College of Engineering</p>
+                    <p>Applying GNNs to network intrusion detection and threat modelling. Exploring graph construction strategies, node embeddings, and model performance on large-scale security datasets.</p>
+                    <div class="tags">
+                        <span>GNN</span>
+                        <span>ML</span>
+                        <span>Python</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
         <section id="about">
             <div class="about-layout">
                 <aside class="about-sidebar">
-                    <img src="https://ui-avatars.com/api/?name=Subhiksha+G&background=38bdf8&color=fff&size=200"
-                        alt="Subhiksha G" class="profile-img">
+                    <img src="https://ui-avatars.com/api/?name=Subhiksha+G&background=38bdf8&color=fff&size=200" alt="Subhiksha G" class="profile-img">
                     <div class="social-links">
-                        <a href="https://github.com/subhiksha1196" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://leetcode.com/u/subhiksha1196/" target="_blank"><i
-                                class="fa-solid fa-code"></i></a>
+                        <a href="https://github.com/subhiksha1196" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://leetcode.com/u/subhiksha1196/" target="_blank"><i class="fa-solid fa-code"></i></a>
                     </div>
                 </aside>
                 <article class="about-content">
                     <h2>Behind the Code</h2>
-                    <p>I'm a second-year Computer Science student with a passion for building things that live on the internet. What started as curiosity about how websites are made has grown into a genuine love for web development, there's something deeply satisfying about writing code and watching it come to life in a browser.</p>
+                    <p>I'm a second-year Computer Science student with a passion for building things that live on the internet. What started as curiosity about how websites are made has grown into a genuine love for full-stack development — there's something deeply satisfying about owning a feature end-to-end, from the database schema to the UI.</p>
 
                     <div class="faq-section">
                         <h3>Quick Facts</h3>
@@ -215,17 +246,21 @@ const developer = {
                             <div class="edu-item">
                                 <strong>SSN College of Engineering</strong>
                                 <p>B.E. Computer Science & Engineering (2024 – 2028)</p>
-                                <p>CGPA: 8.718/10</p>
+                                <p>CGPA: 8.718 / 10</p>
                             </div>
                             <div class="edu-item" style="margin-top: 0.25rem;">
                                 <strong>Vivekananda Matric Higher Secondary School</strong>
-                                <p>12th Grade: 96.3% (2024)</p>
-                                <p>10th Grade: 98.6% (2022)</p>
+                                <p>Class XII: 96.3% (2024)</p>
+                                <p>Class X: 98.6% (2022)</p>
                             </div>
                         </details>
                         <details>
+                            <summary><span><i class="fa-solid fa-flask"></i> Research</span></summary>
+                            <p>Co-author on SemEval-2026 Task 13 — detecting AI-generated code using CodeBERT. Paper submitted and under review.</p>
+                        </details>
+                        <details>
                             <summary><span><i class="fa-solid fa-certificate"></i> Certifications</span></summary>
-                            <p>Data Science for Engineers – NPTEL Certificate</p>
+                            <p>Data Science for Engineers — NPTEL</p>
                         </details>
                         <details>
                             <summary><span><i class="fa-solid fa-location-dot"></i> Location</span></summary>
@@ -235,7 +270,6 @@ const developer = {
                 </article>
             </div>
         </section>
-
     </main>
 
     <footer class="glass-footer">
@@ -245,8 +279,7 @@ const developer = {
                 <p>Building digital masterpieces through code and creativity.</p>
                 <div class="footer-socials">
                     <a href="https://github.com/subhiksha1196" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/subhiksha1196" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://leetcode.com/u/subhiksha1196/" target="_blank"><i class="fa-solid fa-code"></i></a>
                 </div>
             </div>
@@ -256,6 +289,7 @@ const developer = {
                     <li><a href="#home">Home</a></li>
                     <li><a href="projects.html">Work</a></li>
                     <li><a href="#skills">Stack</a></li>
+                    <li><a href="#research">Research</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
             </div>
@@ -277,9 +311,7 @@ const developer = {
                 <h2>Get in Touch</h2>
                 <button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
             </header>
-
             <input type="hidden" name="access_key" value="90365e77-5a87-403a-b720-de1a6702fa52">
-
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -292,9 +324,7 @@ const developer = {
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" required placeholder="Write message here..."></textarea>
             </div>
-
             <div id="form-result" class="form-status" style="display: none;"></div>
-
             <footer>
                 <button type="submit" class="btn-primary">Send Message</button>
             </footer>
@@ -303,8 +333,4 @@ const developer = {
 
     <script src="script.js"></script>
 </body>
-
-
 </html>
-
-
