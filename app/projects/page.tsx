@@ -49,7 +49,7 @@ export default function ProjectsPage() {
               lineHeight: 1.0,
             }}
           >
-            Everything I've Built
+            Everything I&apos;ve Built
           </h1>
           <p className="font-mono text-[14px] mt-4" style={{ color: "var(--muted)" }}>
             All projects — full-stack apps, research tools, games & experiments

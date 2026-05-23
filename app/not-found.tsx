@@ -19,7 +19,7 @@ export default function NotFound() {
         <i>Lost?</i>
       </h1>
       <p className="font-mono text-[14px] mt-6 mb-10" style={{ color: "var(--muted)" }}>
-        This page doesn't exist. Let's get you back.
+        This page doesn&apos;t exist. Let&apos;s get you back.
       </p>
       <Link href="/" className="btn-outline">
         ← back home

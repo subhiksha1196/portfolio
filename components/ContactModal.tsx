@@ -99,7 +99,7 @@ export default function ContactModal() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <p className="font-mono text-[11px] tracking-widest uppercase" style={{ color: "var(--accent)" }}>
-              // get in touch
+              {/* get in touch */}
             </p>
             <button
               onClick={() => setOpen(false)}
