@@ -3,25 +3,23 @@
 import { useState, useEffect } from "react";
 
 export default function ChatBotNudge() {
-  const [mounted, setMounted] = useState(false);
   const [show, setShow] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
+    // If already dismissed this session, stay hidden
+    if (sessionStorage.getItem("nudge-dismissed")) {
+      setDismissed(true);
+      return;
+    }
     setMobile(window.innerWidth < 640);
-    if (sessionStorage.getItem("nudge-dismissed")) return;
-    const t = setTimeout(() => {
-      // 1. mount at correct position (opacity 0)
-      setMounted(true);
-      // 2. two rAFs later: element is painted at correct spot, now fade in
-      requestAnimationFrame(() => requestAnimationFrame(() => setShow(true)));
-    }, 3000);
+    const t = setTimeout(() => setShow(true), 3000);
     return () => clearTimeout(t);
   }, []);
 
   useEffect(() => {
-    const handler = () => dismiss();
+    const handler = () => setShow(false);
     window.addEventListener("chatbot-opened", handler);
     return () => window.removeEventListener("chatbot-opened", handler);
   }, []);
@@ -32,8 +30,7 @@ export default function ChatBotNudge() {
     sessionStorage.setItem("nudge-dismissed", "1");
   }
 
-  // not rendered at all until timer fires — zero chance of top-left flash
-  if (!mounted || dismissed) return null;
+  if (dismissed) return null;
 
   return (
     <div
@@ -48,9 +45,14 @@ export default function ChatBotNudge() {
         borderRadius: "6px",
         padding: "10px 32px 10px 12px",
         boxShadow: "0 6px 28px rgba(0,0,0,0.35)",
+        // Always in DOM at correct position — only visibility toggles
+        // This is the ONLY way to prevent top-left flash
+        visibility: show ? "visible" : "hidden",
         opacity: show ? 1 : 0,
         transform: show ? "translateY(0) scale(1)" : "translateY(8px) scale(0.97)",
-        transition: "opacity 0.3s ease, transform 0.3s ease",
+        transition: show
+          ? "opacity 0.3s ease, transform 0.3s ease"
+          : "none",
         pointerEvents: show ? "auto" : "none",
       }}
     >
