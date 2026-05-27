@@ -101,7 +101,7 @@ export default function Hero() {
       </div>
 
       {/* CTAs pinned to bottom of hero — above the wave */}
-      <div className="relative z-10 pb-20 flex flex-wrap items-center justify-center gap-4">
+      <div className="relative z-10 pb-10 flex flex-wrap items-center justify-center gap-4">
         {/* Resume download button */}
         <a
           href="/resume.pdf"
