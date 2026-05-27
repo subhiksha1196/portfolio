@@ -42,7 +42,7 @@ export default function Hero() {
     <section
       id="home"
       className="hero-dot-grid relative flex flex-col items-center justify-between"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "100dvh" }}
     >
       {/* Radial glow */}
       <div

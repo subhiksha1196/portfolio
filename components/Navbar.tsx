@@ -92,21 +92,33 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — fixed overlay so it doesn't push page content down */}
       {open && (
-        <div className="sm:hidden px-5 pb-4 pt-2 flex flex-col gap-1" style={{ borderTop: "1px solid var(--border)", background: "var(--bg)" }}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="py-2 font-mono text-[13px]"
-              style={{ color: isActive(link) ? "var(--accent)" : "var(--muted)" }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        <>
+          {/* Backdrop */}
+          <div
+            className="sm:hidden fixed inset-0 z-40"
+            style={{ background: "rgba(0,0,0,0.4)" }}
+            onClick={() => setOpen(false)}
+          />
+          {/* Drawer */}
+          <div
+            className="sm:hidden fixed top-12 left-0 right-0 z-50 px-5 pb-4 pt-2 flex flex-col gap-1"
+            style={{ borderTop: "1px solid var(--border)", background: "var(--bg)", boxShadow: "0 8px 24px rgba(0,0,0,0.25)" }}
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="py-2 font-mono text-[13px]"
+                style={{ color: isActive(link) ? "var(--accent)" : "var(--muted)" }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </>
       )}
     </header>
   );

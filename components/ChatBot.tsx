@@ -119,7 +119,7 @@ export default function ChatBot() {
         aria-label="Open contact chat"
         style={{
           position: "fixed",
-          bottom: "28px",
+          bottom: "max(28px, env(safe-area-inset-bottom, 16px))",
           right: "28px",
           zIndex: 1000,
           width: "52px",
@@ -155,10 +155,11 @@ export default function ChatBot() {
         <div
           style={{
             position: "fixed",
-            bottom: "92px",
+            bottom: "max(92px, calc(env(safe-area-inset-bottom, 0px) + 92px))",
             right: "28px",
             zIndex: 999,
-            width: "min(340px, 92vw)",
+            width: "min(340px, calc(100vw - 32px))",
+            maxHeight: "min(520px, calc(100dvh - 140px))",
             background: "var(--bg-card)",
             border: "1px solid var(--border)",
             borderRadius: "4px",
@@ -203,8 +204,8 @@ export default function ChatBot() {
               flexDirection: "column",
               gap: "10px",
               overflowY: "auto",
-              maxHeight: "420px",
-              minHeight: "280px",
+              flex: 1,
+              minHeight: "180px",
             }}
           >
             {messages.map((msg, i) => (
