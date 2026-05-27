@@ -31,7 +31,7 @@ export default function ChatBotNudge() {
     <div
       style={{
         position: "fixed",
-        bottom: "20px",
+        bottom: "90px",
         right: "90px",
         zIndex: 1001,
         width: "min(220px, 80vw)",
@@ -40,6 +40,7 @@ export default function ChatBotNudge() {
         borderRadius: "6px",
         padding: "10px 32px 10px 12px",
         boxShadow: "0 6px 28px rgba(0,0,0,0.35)",
+        opacity: 0,
         animation: "nudge-in 0.35s cubic-bezier(0.16,1,0.3,1) forwards",
       }}
     >
