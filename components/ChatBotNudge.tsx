@@ -3,12 +3,20 @@
 import { useState, useEffect } from "react";
 
 export default function ChatBotNudge() {
+  const [mounted, setMounted] = useState(false);
   const [show, setShow] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
+    setMobile(window.innerWidth < 640);
     if (sessionStorage.getItem("nudge-dismissed")) return;
-    const t = setTimeout(() => setShow(true), 3000);
+    const t = setTimeout(() => {
+      // 1. mount at correct position (opacity 0)
+      setMounted(true);
+      // 2. two rAFs later: element is painted at correct spot, now fade in
+      requestAnimationFrame(() => requestAnimationFrame(() => setShow(true)));
+    }, 3000);
     return () => clearTimeout(t);
   }, []);
 
@@ -24,41 +32,31 @@ export default function ChatBotNudge() {
     sessionStorage.setItem("nudge-dismissed", "1");
   }
 
-  if (dismissed) return null;
+  // not rendered at all until timer fires — zero chance of top-left flash
+  if (!mounted || dismissed) return null;
 
   return (
     <div
-      id="chatbot-nudge"
       style={{
         position: "fixed",
-        bottom: "14px",
-        right: "90px",
+        // desktop: bubble is bottom 28px, 52px tall → centre ~54px from bottom
+        // nudge bottom 14px with ~40px height centres it alongside the bubble
+        bottom: mobile ? "92px" : "14px",
+        // desktop: 28px (bubble right) + 52px (bubble width) + 10px gap = 90px
+        right: mobile ? "16px" : "90px",
         zIndex: 1001,
-        width: "min(220px, 60vw)",
+        width: "210px",
         background: "var(--bg-card)",
         border: "1px solid var(--border)",
         borderRadius: "6px",
         padding: "10px 32px 10px 12px",
         boxShadow: "0 6px 28px rgba(0,0,0,0.35)",
-        // React-controlled fade+slide — no CSS animation, no flash
         opacity: show ? 1 : 0,
-        transform: show ? "translateY(0) scale(1)" : "translateY(10px) scale(0.97)",
-        transition: show
-          ? "opacity 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.35s cubic-bezier(0.16,1,0.3,1)"
-          : "none",
+        transform: show ? "translateY(0) scale(1)" : "translateY(8px) scale(0.97)",
+        transition: "opacity 0.3s ease, transform 0.3s ease",
         pointerEvents: show ? "auto" : "none",
       }}
     >
-      {/* Mobile alignment override */}
-      <style>{`
-        @media (max-width: 639px) {
-          #chatbot-nudge {
-            bottom: 92px !important;
-            right: 16px !important;
-          }
-        }
-      `}</style>
-
       {/* Arrow pointing right toward the bubble */}
       <div
         style={{
@@ -92,7 +90,8 @@ export default function ChatBotNudge() {
           padding: "2px 4px",
         }}
         onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
-        onMouseLeave={e => (e.currentTarget.style.color = "var(--muted)")}>
+        onMouseLeave={e => (e.currentTarget.style.color = "var(--muted)")}
+      >
         ✕
       </button>
 
