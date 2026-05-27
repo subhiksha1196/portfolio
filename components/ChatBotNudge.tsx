@@ -39,11 +39,12 @@ export default function ChatBotNudge() {
     <div
       style={{
         position: "fixed",
-        // desktop: bubble is bottom 28px, 52px tall → centre ~54px from bottom
-        // nudge bottom 14px with ~40px height centres it alongside the bubble
-        bottom: mobile ? "92px" : "14px",
-        // desktop: 28px (bubble right) + 52px (bubble width) + 10px gap = 90px
-        right: mobile ? "16px" : "90px",
+        bottom: mobile ? "80px" : "14px",
+        // desktop: right-anchored beside the bubble
+        // mobile: left-anchored so bubble stays fully visible
+        ...(mobile
+          ? { left: "16px" }
+          : { right: "90px" }),
         zIndex: 1001,
         width: "210px",
         background: "var(--bg-card)",
@@ -57,21 +58,23 @@ export default function ChatBotNudge() {
         pointerEvents: show ? "auto" : "none",
       }}
     >
-      {/* Arrow pointing right toward the bubble */}
-      <div
-        style={{
-          position: "absolute",
-          right: "-7px",
-          top: "50%",
-          width: "12px",
-          height: "12px",
-          background: "var(--bg-card)",
-          border: "1px solid var(--border)",
-          borderLeft: "none",
-          borderTop: "none",
-          transform: "translateY(-50%) rotate(-45deg)",
-        }}
-      />
+      {/* Arrow — points right on desktop, hidden on mobile (popup is on left) */}
+      {!mobile && (
+        <div
+          style={{
+            position: "absolute",
+            right: "-7px",
+            top: "50%",
+            width: "12px",
+            height: "12px",
+            background: "var(--bg-card)",
+            border: "1px solid var(--border)",
+            borderLeft: "none",
+            borderTop: "none",
+            transform: "translateY(-50%) rotate(-45deg)",
+          }}
+        />
+      )}
 
       {/* Close */}
       <button
