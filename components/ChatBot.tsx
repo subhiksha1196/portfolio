@@ -119,7 +119,7 @@ export default function ChatBot() {
         aria-label="Open contact chat"
         style={{
           position: "fixed",
-          bottom: "max(28px, env(safe-area-inset-bottom, 16px))",
+          bottom: "80px",
           right: "28px",
           zIndex: 1000,
           width: "52px",
@@ -155,7 +155,7 @@ export default function ChatBot() {
         <div
           style={{
             position: "fixed",
-            bottom: "max(92px, calc(env(safe-area-inset-bottom, 0px) + 92px))",
+            bottom: "144px",
             right: "28px",
             zIndex: 999,
             width: "min(340px, calc(100vw - 32px))",
