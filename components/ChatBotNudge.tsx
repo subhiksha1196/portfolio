@@ -37,9 +37,9 @@ export default function ChatBotNudge() {
       style={{
         position: "fixed",
         bottom: mobile ? "68px" : "14px",
-        right: mobile ? "8px" : "90px",
+        right: mobile ? "88px" : "90px",
         zIndex: 1001,
-        width: mobile ? "180px" : "210px",
+        width: mobile ? "calc(100vw - 104px)" : "210px",
         background: "var(--bg-card)",
         border: "1px solid var(--border)",
         borderRadius: "6px",
