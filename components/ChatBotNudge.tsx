@@ -39,14 +39,10 @@ export default function ChatBotNudge() {
     <div
       style={{
         position: "fixed",
-        bottom: mobile ? "80px" : "14px",
-        // desktop: right-anchored beside the bubble
-        // mobile: left-anchored so bubble stays fully visible
-        ...(mobile
-          ? { left: "16px" }
-          : { right: "90px" }),
+        bottom: mobile ? "68px" : "14px",
+        right: mobile ? "8px" : "90px",
         zIndex: 1001,
-        width: "210px",
+        width: mobile ? "180px" : "210px",
         background: "var(--bg-card)",
         border: "1px solid var(--border)",
         borderRadius: "6px",
@@ -58,23 +54,21 @@ export default function ChatBotNudge() {
         pointerEvents: show ? "auto" : "none",
       }}
     >
-      {/* Arrow — points right on desktop, hidden on mobile (popup is on left) */}
-      {!mobile && (
-        <div
-          style={{
-            position: "absolute",
-            right: "-7px",
-            top: "50%",
-            width: "12px",
-            height: "12px",
-            background: "var(--bg-card)",
-            border: "1px solid var(--border)",
-            borderLeft: "none",
-            borderTop: "none",
-            transform: "translateY(-50%) rotate(-45deg)",
-          }}
-        />
-      )}
+      {/* Arrow pointing right toward the bubble */}
+      <div
+        style={{
+          position: "absolute",
+          right: "-7px",
+          top: "50%",
+          width: "12px",
+          height: "12px",
+          background: "var(--bg-card)",
+          border: "1px solid var(--border)",
+          borderLeft: "none",
+          borderTop: "none",
+          transform: "translateY(-50%) rotate(-45deg)",
+        }}
+      />
 
       {/* Close */}
       <button
