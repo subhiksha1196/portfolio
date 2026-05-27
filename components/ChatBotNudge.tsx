@@ -28,22 +28,33 @@ export default function ChatBotNudge() {
   if (dismissed || !visible) return null;
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "90px",
-        right: "90px",
-        zIndex: 1001,
-        width: "min(220px, 80vw)",
-        background: "var(--bg-card)",
-        border: "1px solid var(--border)",
-        borderRadius: "6px",
-        padding: "10px 32px 10px 12px",
-        boxShadow: "0 6px 28px rgba(0,0,0,0.35)",
-        opacity: 0,
-        animation: "nudge-in 0.35s cubic-bezier(0.16,1,0.3,1) forwards",
-      }}
-    >
+    <>
+      {/* Mobile-only: align nudge with the raised chatbot bubble */}
+      <style>{`
+        @media (max-width: 639px) {
+          #chatbot-nudge {
+            bottom: 144px !important;
+            right: 16px !important;
+          }
+        }
+      `}</style>
+      <div
+        id="chatbot-nudge"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "90px",
+          zIndex: 1001,
+          width: "min(220px, 80vw)",
+          background: "var(--bg-card)",
+          border: "1px solid var(--border)",
+          borderRadius: "6px",
+          padding: "10px 32px 10px 12px",
+          boxShadow: "0 6px 28px rgba(0,0,0,0.35)",
+          visibility: "hidden",
+          animation: "nudge-in 0.35s cubic-bezier(0.16,1,0.3,1) 0.05s forwards",
+        }}
+      >
       {/* Arrow */}
       <div
         style={{
@@ -87,6 +98,7 @@ export default function ChatBotNudge() {
         hiring or looking to collaborate?<br />
         <span style={{ color: "var(--accent)" }}>drop a message ↗</span>
       </p>
-    </div>
+      </div>
+    </>
   );
 }

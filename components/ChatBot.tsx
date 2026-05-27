@@ -113,13 +113,28 @@ export default function ChatBot() {
 
   return (
     <>
+      {/* Mobile-only overrides */}
+      <style>{`
+        @media (max-width: 639px) {
+          #chatbot-bubble {
+            bottom: 80px !important;
+          }
+          #chatbot-window {
+            bottom: 144px !important;
+            width: calc(100vw - 32px) !important;
+            max-height: calc(100dvh - 160px) !important;
+          }
+        }
+      `}</style>
+
       {/* Bubble toggle */}
       <button
+        id="chatbot-bubble"
         onClick={open ? () => setOpen(false) : handleOpen}
         aria-label="Open contact chat"
         style={{
           position: "fixed",
-          bottom: "80px",
+          bottom: "28px",
           right: "28px",
           zIndex: 1000,
           width: "52px",
@@ -153,13 +168,13 @@ export default function ChatBot() {
       {/* Chat window */}
       {open && (
         <div
+          id="chatbot-window"
           style={{
             position: "fixed",
-            bottom: "144px",
+            bottom: "92px",
             right: "28px",
             zIndex: 999,
-            width: "min(340px, calc(100vw - 32px))",
-            maxHeight: "min(520px, calc(100dvh - 140px))",
+            width: "min(340px, 92vw)",
             background: "var(--bg-card)",
             border: "1px solid var(--border)",
             borderRadius: "4px",
@@ -205,7 +220,8 @@ export default function ChatBot() {
               gap: "10px",
               overflowY: "auto",
               flex: 1,
-              minHeight: "180px",
+              minHeight: "280px",
+              maxHeight: "420px",
             }}
           >
             {messages.map((msg, i) => (
