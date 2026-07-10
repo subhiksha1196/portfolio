@@ -19,6 +19,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://subhiksha-g.vercel.app"),
   title: "Subhiksha's Portfolio",
   description:
     "Portfolio of Subhiksha, CS student and AI/ML researcher at SSN College of Engineering, Chennai.",
@@ -26,11 +27,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Subhiksha — Full-Stack Developer & AI/ML Researcher",
     description: "CS student building full-stack apps and doing NLP + cybersecurity research at SSN College of Engineering.",
+    url: "https://subhiksha-g.vercel.app/",
+    siteName: "Subhiksha's Portfolio",
     type: "website",
     locale: "en_IN",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Subhiksha — Full-Stack Developer & AI/ML Researcher",
     description: "CS student building full-stack apps and doing NLP + cybersecurity research.",
   },
